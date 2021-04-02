@@ -1,0 +1,27 @@
+<html>
+<head>
+	<title>Frohe Ostern</title>
+	<link rel="icon" href="/bilder/favicon.png" type="image/x-icon"/>
+	<link rel="stylesheet" href="/style.css"/>
+	<script src="/script.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+	<%- include("../../../components/modals") %>
+	<%- include("../../../components/navbar", {redirect: "/aktionen/2013/frohe-ostern"}) %>
+	<div class="txt blocksatz noFooter">
+		<!-- title -->
+		<h2>Frohe Ostern</h2>
+		<!-- date, author -->
+		<h6>29/03/2013</h6>
+		<!-- teaser -->
+		<p>Wir wünschen allen Mitgliedern, Eltern und Freunden frohe Feiertage zusammen mit euren Familien.</p>
+		<!-- main text -->
+		<div class="news-img-wrap"><div class="outer"><div class="mediaelement mediaelement-image"><img onclick="onImgClick(this)" itemprop="image" src="/aktionen/2013/frohe-ostern/images/csm_Vorstand_1ae3d4990b.jpg" width="282" height="200" alt="" /></div></div></div><div class="news-text-wrap" itemprop="articleBody"></div>
+		<div class="news-related-wrap"></div>
+	</div>
+	<%- include("../../../components/footer") %>
+</body>
+</html>

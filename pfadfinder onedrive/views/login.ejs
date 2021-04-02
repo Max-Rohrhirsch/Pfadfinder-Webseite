@@ -1,0 +1,144 @@
+<html lang="en">
+<head>
+    <title>Pfadfinder</title>
+    <link rel="icon" href="./bilder/favicon.png" type="image/x-icon"/> <!--Favicon -->
+
+    <link rel="stylesheet" href="style.css"/>
+
+    <script src="./script.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>             <!--Die Beiden linien importieren Icons -->
+
+<style>
+    body {
+        overflow: hidden;
+    }
+
+    form {
+        width: 350px;
+        margin: auto;
+        background-color: var(--backgroundTransparent);
+        text-align: center;
+        border-radius: 3px;
+        user-select: none;
+    }
+
+    #loginh2 {
+        font-size: 25px;
+        text-align: center;
+        padding: 8px;
+        padding-top: 20px;
+    }
+
+    .logininput {
+        border: 2px solid black;
+        height: 35px;
+        width: 300px;
+        margin: 3px;
+        border-radius: 7px;
+        outline: none;
+        padding-left: 10px;
+    }
+
+    #checkbox {
+        width: 300px;
+        text-align: left;
+        margin: 20px auto;
+    }
+
+    #passtext {
+        display: block;
+
+    }
+
+    #loginbutton {
+        border: 2px solid black;
+        height: 45px;
+        width: 300px;
+        margin-bottom: 20px;
+        border-radius: 7px;
+        font-size: 20px;
+        background-color: #6f6;
+    }
+
+    #loginbutton:hover {
+        background-color: #fc0;
+        box-shadow: 0 0 20px orange;
+    }
+
+    .error {
+      color: red;
+      font-size: 15px;
+      text-align: left;
+      margin-left: 25px;
+      margin-bottom: 10px;
+    }
+</style>
+
+
+</head>
+<body>
+    <%- include("./components/modals") %>
+
+    <nav>                <!--Die Navigation Bar-->
+        <div class="dropdown">                       <!-- Hat eine Hauptklasse -->
+            <a class="dropdownBtn" onclick="onHomeClick('id0')">Home <img src="./icons/navRunter.svg" style="filter: var(--orangeNav)"></a>  <!-- Eine klasse für denn Knopf -->
+            <div class="dropdownContent">    <!-- Noch eine Klasse für die Tabs -->
+                <a onclick="onHomeClick('id1')">Über den Stamm</a>
+                <a onclick="onHomeClick('id2')">Termine</a>
+                <a onclick="onHomeClick('id3')">Kontakte</a>
+            </div>
+        </div>
+
+        <div class="dropdown">                     <!-- Zweites Dropdown menü -->
+            <a class="dropdownBtn">Der Stamm <img src="./icons/navRunter.svg" style="filter: var(--orangeNav)"></a>
+            <div class="dropdownContent">
+                <a href="./meuten">Meuten</a>
+                <a href="./sippen">Sippen</a>
+                <a href="./singerunde">Singerunde</a>
+                <a href="./shop">Shop</a>
+                <a href="./chronik">Chronik</a>
+                <a href="./ideen">Ideen</a>
+            </div>
+        </div>
+        <a class="navLinks" href="./links">Links</a>
+        <a class="navLinks" href="./mitmachen">Mitmachen</a>
+        <a class="navLinks" href="./aktionenUebersicht">Aktivitäten</a>
+        <span style="flex-grow: 1"></span>
+        <a onclick="toggleDarkMode();" class="navLinks"><img class="darkmodeIcon" id="darkmodeIcon" src="./bilder/moon.png"></a>
+    </nav>     <br/>
+
+
+
+
+
+    <div class="bg" style="height: 100%; background-image: url(./bilder/bg1.JPG);">
+        <form action="/login" method="post">
+            <h2 id="loginh2">PFADIS LOGIN</h2><br/>
+            <input
+              class="logininput"
+              type="text"
+              name="username"
+              placeholder="Username"
+              value="<%= usr %>"
+              style="border-color: <%= w_usr ? 'red' : 'black' %>"><br/>
+            <% if (w_usr) { %>
+              <p class="error"><%= usr ? "Wrong" : "Missing" %> username</p>
+            <% } %>
+            <input
+              class="logininput"
+              type="password"
+              name="password"
+              placeholder="Password"
+              value="<%= pwd %>"
+              style="border-color: <%= w_pwd ? 'red' : 'black' %>"><br/>
+            <% if (w_pwd) { %>
+              <p class="error"><%= pwd ? "Wrong" : "Missing" %> password</p>
+            <% } %>
+            <div id="checkbox"><input type="checkbox" name="remember" checked="<%= remember %>"> Remember me<br/></div>
+            <button id="loginbutton" type="submit">LOGIN</button>
+        </form>
+    </div>
+</body>
+</html>

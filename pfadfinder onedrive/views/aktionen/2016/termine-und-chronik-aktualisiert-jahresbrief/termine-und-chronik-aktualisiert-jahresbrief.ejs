@@ -1,0 +1,27 @@
+<html>
+<head>
+	<title>Termine und Chronik aktualisiert + Jahresbrief</title>
+	<link rel="icon" href="/bilder/favicon.png" type="image/x-icon"/>
+	<link rel="stylesheet" href="/style.css"/>
+	<script src="/script.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+	<%- include("../../../components/modals") %>
+	<%- include("../../../components/navbar", {redirect: "/aktionen/2016/termine-und-chronik-aktualisiert-jahresbrief"}) %>
+	<div class="txt blocksatz noFooter">
+		<!-- title -->
+		<h2>Termine und Chronik aktualisiert + Jahresbrief</h2>
+		<!-- date, author -->
+		<h6>24/12/2016</h6>
+		<!-- teaser -->
+		<p>Alle bevorstehende Termine für 2017 hinzugefügt und die Chronik wurde um das Jahr 2016 ergänzt. </p>
+		<!-- main text -->
+		<div class="news-img-wrap"><div class="outer"><div class="mediaelement mediaelement-image"><img onclick="onImgClick(this)" itemprop="image" src="/aktionen/2016/termine-und-chronik-aktualisiert-jahresbrief/images/16-12_Jahresbrief2016.pdf" width="0" height="0" alt="" /></div></div></div><div class="news-text-wrap" itemprop="articleBody"><p>Außerdem hier der aktuelle Jahresbrief.</p></div>
+		<div class="news-related-wrap"></div>
+	</div>
+	<%- include("../../../components/footer") %>
+</body>
+</html>

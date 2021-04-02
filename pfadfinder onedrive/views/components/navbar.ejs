@@ -1,0 +1,36 @@
+<nav>                <!--Die Navigation Bar-->
+    <div class="dropdown">                       <!-- Hat eine Hauptklasse -->
+        <a class="dropdownBtn" onclick="onHomeClick('id0')">Home <img src="./icons/navRunter.svg" style="filter: var(--orangeNav)"</a>  <!-- Eine klasse für denn Knopf -->
+        <div class="dropdownContent">    <!-- Noch eine Klasse für die Tabs -->
+            <a onclick="onHomeClick('id1')">Über den Stamm</a>
+            <a onclick="onHomeClick('id2')">Termine</a>
+            <a onclick="onHomeClick('id3')">Kontakte</a>
+        </div>
+    </div>
+
+    <div class="dropdown">                     <!-- Zweites Dropdown menü -->
+        <a class="dropdownBtn">Der Stamm <img src="./icons/navRunter.svg" style="filter: var(--orangeNav)"></a>
+        <div class="dropdownContent">
+            <a href="/meuten">Meuten</a>
+            <a href="/sippen">Sippen</a>
+            <a href="/singerunde">Singerunde</a>
+            <a href="/shop">Shop</a>
+            <a href="/chronik">Chronik</a>
+            <a href="/ideen">Ideen</a>
+        </div>
+    </div>
+    <a class="navLinks" href="/links">Links</a>
+    <a class="navLinks" href="/mitmachen">Mitmachen</a>
+    <a class="navLinks" href="/aktionenUebersicht">Aktivitäten</a>
+    <span style="flex-grow: 1"></span>
+
+    <% if(loggedIn) { %>
+      <form action="/logout" method="post" style="margin: 0px;">
+        <button class="navLinks logIn" type="submit" style="outline: none">Log out</button>
+      </form>
+    <% } else { %>
+      <a class="navLinks logIn" href="/login?red=<%= redirect %>" type="submit">Log in</a>
+    <% } %>
+
+    <a onclick="toggleDarkMode();" class="navLinks"><img class="darkmodeIcon" id="darkmodeIcon" src="/bilder/moon.png"></a>
+</nav>
