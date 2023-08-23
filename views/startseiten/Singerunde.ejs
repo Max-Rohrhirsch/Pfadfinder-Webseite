@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <title>Pfadfinder</title>
+    <link rel="icon" href="./bilder/favicon.png" type="image/x-icon"/> <!--Favicon -->
+
+    <link rel="stylesheet" href="style.css"/>
+
+    <script src="./script.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>             <!--Die Beiden linien importieren Icons -->
+</head>
+<body>
+    <%- include("../components/modals") %>
+    <%- include("../components/navbar", {redirect: "/Singerunde"}) %><br/><br/>
+
+                              <!-- Hauptteil-->
+    <div class="txt nofooter">
+        <h2>Singerunde der Renchtäler Pfadfinder</h2><br/>
+        <p>Hast du Lust auf ein paar Singerunden außerhalb deiner Gruppenstunden?</p>
+        <p>    <b>WANN?</b> Termine stehen im Heim und werden zukünftig bei Info-Mails bekannt gegeben<br/>
+
+               <b>WO?</b> Im Oberkircher Pfadfinderheim<br/>
+
+                <b>WER?</b> Vom Wölfling über den Pfadfinder/Rover bis zu den Altpfadfindern sind alle eingeladen<br/>
+
+                <b>FRAGEN?</b>singen@pfadis.org (Helena Kästner, Manfred Kohler und Helen Meier)</p><br/>
+    </div>
+
+    <%- include("../components/footer") %>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Page not found</title>
+        <link rel="icon" href="./bilder/favicon.png" type="image/x-icon"/>
+    <style>
+        ::selection{
+            background-color: orange;
+        }
+
+        body {
+          margin: 0px;
+          overflow: hidden;
+        }
+        .backEffect {
+          background: radial-gradient(farthest-corner at 20vw 10vh,#7397a1 0.3%,#3f2c41 90%);
+          width: 100%;
+          height: 100vh;
+          display: flex;
+          flex-direction: column;
+
+        }
+        .center {
+            margin: auto 0px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .welle span {
+            display: inline-block;
+            font-size: 4em;
+            color: white;
+            animation: wellen 2s ease-in-out infinite;
+            animation-delay: calc(0.1s * var(--i));
+        }
+
+        @keyframes wellen {
+            0%        {transform: translatey(0px);}
+            20%       {transform: translateY(-20px);}
+            40%, 100% {transform: translatey(0px);}
+        }
+
+        h2 {
+          font-size: 250px;
+          color: rgba(255, 255, 255, 0.5);
+          margin: 0 auto;
+        }
+
+    </style>
+  </head>
+  <body>
+        <div class="backEffect">
+            <div class="center">
+              <h2>404</h2>
+                <div class="welle">
+                      <span style="--i: 1;">P</span>
+                      <span style="--i: 2;">a</span>
+                      <span style="--i: 3;">g</span>
+                      <span style="--i: 4;">e</span>
+                      <span style="--i: 5;margin:10px;">   </span>
+                      <span style="--i: 6;">n</span>
+                      <span style="--i: 7;">o</span>
+                      <span style="--i: 8;">t</span>
+                      <span style="--i: 9;margin:10px;">   </span>
+                      <span style="--i: 10;">f</span>
+                      <span style="--i: 11;">o</span>
+                      <span style="--i: 12;">u</span>
+                      <span style="--i: 13;">n</span>
+                      <span style="--i: 14;">d</span>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

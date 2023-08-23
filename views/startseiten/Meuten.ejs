@@ -1,0 +1,133 @@
+<html lang="en">
+<head>
+    <title>Pfadfinder</title>
+    <link rel="icon" href="./bilder/favicon.png" type="image/x-icon"/> <!--Favicon -->
+
+    <link rel="stylesheet" href="style.css"/>
+
+    <script src="./script.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>             <!--Die Beiden linien importieren Icons -->
+
+    <style>
+
+    </style>
+</head>
+<body>
+    <%- include("../components/modals") %>
+    <%- include("../components/navbar", {redirect: "/Meuten"}) %>
+
+    <main>
+        <header class="bg" style=" background-image: url(bilder/bg4.jpeg)">
+            <div>
+                <h1>MEUTE</h1>
+                <p>Eine Meute ist eine Pfadfindergruppe von Wölflingen (Kindern zwischen 6 - 11 Jahren). Meistens sind ca. 10 - 25 kinder in einer Meute.
+                    Sie haben ein Grünes oder Orangenes Halstuch.
+                </p>
+            </div>
+        </header>
+        <div class="txt">
+            <h2>Gruppenstunden Meuten der Wölflinge (6 - 11 Jahre)</h2>
+
+            <table>
+                <tr>
+                    <th>Meute</th>
+                    <th>Wann?</th>
+                    <th>Gruppenführer</th>
+                    <th>Wer?</th>
+                </tr>
+                <tr>
+                    <td>Mogli</td>
+                    <td>Dienstag 17.00-19.00 Uhr</td>
+                    <td>Amelie Englert, Hannah Nufer</td>
+                    <td>Mädchen 6-10 Jahre</td>
+                </tr>
+                <tr>
+                    <td>Akela</td>
+                    <td>Mittwoch 17.00-19.00 Uhr</td>
+                    <td>Annette Müller, Moritz Helbig, Jule Weichert</td>
+                    <td>Jungs 6-10 Jahre</td>
+                </tr>
+                <tr>
+                    <td>Balu</td>
+                    <td>Mittwoch 17.00-19.00 Uhr</td>
+                    <td>Max Rohrhirsch, Noah Busam</td>
+                    <td>Jungs 9-10 Jahre</td>
+                </tr>
+            </table>
+
+
+
+            <br/>
+
+
+
+            <!-- SlideShow-->
+
+            <div class="slideshowDiv">
+
+                <div class="mySlides fade">
+                    <div class="slideshow-number">1 / 3</div>
+                    <img src="./bilder/Akela.jpg" style="width:100%" onclick="onImgClick(this)">
+                    <div class="slideshowText">Akela</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="slideshow-number">2 / 3</div>
+                    <img src="./bilder/Mogli.jpg" style="width:100%" onclick="onImgClick(this)">
+                    <div class="slideshowText">Mogli</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="slideshow-number">3 / 3</div>
+                    <img src="./bilder/bg4_epic.jpeg" style="width:100%" onclick="onImgClick(this)">
+                    <div class="slideshowText">Epic img</div>
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            </div>
+            <br>
+
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+            <br/><br/>
+
+            <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                if (n > slides.length) {slideIndex = 1}
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";
+                dots[slideIndex-1].className += " active";
+            }
+            </script>
+        </main>
+
+        <%- include("../components/footer") %>
+    </body>
+</html>

@@ -1,0 +1,62 @@
+<html lang="en">
+<head>
+    <title>Pfadfinder</title>
+    <link rel="icon" href="./bilder/favicon.png" type="image/x-icon"/> <!--Favicon -->
+
+    <link rel="stylesheet" href="style.css"/>
+
+    <script src="./script.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>             <!--Die Beiden linien importieren Icons -->
+
+<style>
+
+</style>
+
+
+</head>
+<body>
+    <%- include("../components/modals") %>
+    <%- include("../components/navbar", {redirect: "/Mitmachen"}) %>
+
+                              <!--Hauptteil-->
+    <header class="bg" style="height: 50%; background-image: url(bilder/bg4.jpeg)">
+        <div>
+            <h1>MITMACHEN?</h1>
+            <p>Du willst den Ränchtäler Pfadfinder EV. beitreten? Dan bist du hier genau richtig. Auf dieser Seite erfährst du, wie du dich oder dein/e Kind/er anmeldest.
+            bzw. bei wo und bei wem du dich melden kannst.</p>
+        </div>
+    </header>
+
+    <div class="txt">
+        <h2>Mitglied werden</h2>
+    <b> <p> Du bist zwischen 6 und 14 Jahre alt?</p></b>
+    <b> <p> Du willst Spiel, Spaß und Abenteuer?</p></b>
+    <b> <p> Du magst die Natur und möchtest die Welt entdecken?</p></b>
+        <p> Dann bist du bei uns genau richtig, komm doch einfach mal unverbindlich zu einer unserer Gruppenstunden:
+            Immer donnerstags von <b>17:30 bis 19:30 Uhr </b>in unserem Pfadfinderheim (nicht in den Schulferien oder an Feiertagen)
+            Wenn es dir bei uns gefällt, kannst du gerne dem Verein beitreten und mit auf Lager und Fahrten kommen.
+            Die Anmeldung können sie bei jedem Gruppenleiter machen.
+        </p><br/>
+
+        <h2>Kontakadresse</h2>
+        <p><i class="material-icons">&#xe0c8;</i>  Stadtmattstr. 2</p>
+        <p>D-77704 Oberkirch</p>
+        <p><img style="filter: var(--iconFilter)" src="./icons/telehpone.svg">  Tel.: 07802/981988</p>
+        <br/>
+        <h2>€ Spenden</h2>
+        <p>Wenn es bei jungen Menschen an irgendetwas mangelt, dann ist es meistens Geld. Daher sind wir auf finanzielle Unterstützung angewiesen, um unsere Arbeit aufrecht zu erhalten.</p>
+        <p>Wir sind ein gemeinnützig anerkannter Verein, alle Spenden lassen sich von der Steuer absetzen!</p>
+        <br>
+        <p><b>Spendenkonto:</b></p>
+        <p>Kontoinhaber: Pfadfinderhorst Greif e.V.</p>
+        <p>Bank: Volksbank Bruchsal-Bretten eG</p>
+        <p>IBAN: DE75663912000061433406</p>
+        <p>BIC: GENODE61BTT</p>
+        <br>
+    </div>
+
+    <%- include("../components/footer") %>
+</body>
+</html>
