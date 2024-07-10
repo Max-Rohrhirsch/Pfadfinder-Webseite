@@ -1,0 +1,248 @@
+<html lang="en">
+<head>
+    <title>Pfadfinder</title>
+    <link rel="icon" href="./bilder/favicon.png" type="image/x-icon"/> <!--Favicon -->
+
+    <link rel="stylesheet" href="style.css"/>
+
+    <script src="./script.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>             <!--Die Beiden linien importieren Icons -->
+
+    <style>
+        .calendar {                          
+            width: var(--mainWidth);
+            height: 70vh;
+            max-height: 500px;
+            margin: var(--mainFontSize) 0px;
+            filter: var(--calendarFilter);
+            transition: var(--transitionTime);
+        }
+
+        .center {
+            margin-left: 15vw;
+            width: 70vw;
+        }
+    </style>
+</head>
+<body>
+    <%- include("../components/modals") %>
+    <%- include("../components/navbar", {redirect: "/Heimvermietung"}) %>
+    
+    <main>
+        <header class="bg" style="background-image: url(bilder/heimBilder/pfadiHeim.jpg)">
+            <div>
+                <h1>Heimvermietung</h1>
+                <p>Das Oberkircher Pfadfinderheim ist ein 3-stöckiges Gebäude im Zentrum von Oberkirch.</p>
+            </div>
+        </header>
+    </main>
+
+
+        <div class="split">
+
+            <div class="left">
+                <h4>Map</h4>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2642.038182531116!2d8.070541315662908!3d48.53249997925694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4796d61463b61687%3A0xff1682b6814bb236!2sRencht%C3%A4ler+Pfadfinder+e.V.!5e0!3m2!1sde!2sde!4v1463319607172" 
+                        width="90%" 
+                        height="500" 
+                        frameborder="0" 
+                        style="border:0;" 
+                        allowfullscreen="">
+                </iframe>
+
+                <h4>Kontaktadresse:</h4>
+                <p>Stadtmattstr. 2</p>
+                <p>D-77704 Oberkirch</p>
+                <p>Tel.: 07802 981988</p>
+                <p>E-Mail: vermietung@pfadis.org</p>
+            </div>
+            <div class="right">
+                <h4>Heimvermietung</h4>
+                <iframe src="https://calendar.google.com/calendar/embed?wkst=2&amp;bgcolor=%23ffffff&amp;ctz=Europe%2FBerlin&amp;src=b3MzdWo4NnZibmRuZDA1aGE5MGdobHMzMWNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%239E69AF&amp;showTitle=0&amp;showNav=1&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0"
+                        class="calendar"
+                        frameborder="0"
+                        style="margin-top: 0; padding-top: 0; width: 90%;"
+                        scrolling="no">
+                </iframe>
+            </div>
+        </div>
+        <br><br>
+        <main>
+            <header class="bg" style="background-image: url(bilder/heimBilder/pfadiHeim.jpg)">
+                <div>
+                    <h1>Die Räumlichkeiten</h1>
+                </div>
+            </header>
+        </main>
+        
+        <div class="center">
+            <div class="split">
+                <div class="left">
+                    <h4>Küche mit:</h4>
+                    <ul>
+                        <li>2 Herden/Backöfen</li>
+                        <li>Spülmaschine</li>
+                        <li>Geschirr/Besteck</li>
+                        <li>Töpfe/Pfannen</li>
+                        <li>Kühl- und Gefrierschrank</li>
+                        <li>Kaffeemaschine</li>
+                        <li>Wasserkocher</li>
+                        <li>Mikrowelle</li>
+                    </ul>
+                </div>
+                <div class="right">
+                    <div class="txt">
+                        <div class="slideshowDiv" id="slideshow1">
+                            <div class="mySlides fade">
+                                <div class="slideshow-number">1 / 3</div>
+                                <img src="./bilder/heimBilder/küche1.jpg" style="width:100%" onclick="onImgClick(this)">
+                            </div>
+                
+                            <div class="mySlides fade">
+                                <div class="slideshow-number">2 / 3</div>
+                                <img src="./bilder/heimBilder/küche2.jpg" style="width:100%" onclick="onImgClick(this)">
+                            </div>
+                
+                            <div class="mySlides fade">
+                                <div class="slideshow-number">3 / 3</div>
+                                <img src="./bilder/heimBilder/küche3.jpg" style="width:100%" onclick="onImgClick(this)">
+                            </div>
+                
+                            <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+                            <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+                        </div>
+                        <br>
+                
+                        <div style="text-align:center">
+                            <span class="dot" onclick="currentSlide(1, 0)"></span>
+                            <span class="dot" onclick="currentSlide(2, 0)"></span>
+                            <span class="dot" onclick="currentSlide(3, 0)"></span>
+                        </div>
+                        <br/><br/>
+                    </div>
+                
+                </div>
+            </div>
+
+            <div class="split">
+                <div class="left">
+                    <h4>Schlaf- Waschräume</h4>
+                    <ul>
+                        <li>1 Waschraum mit Dusche, Waschmaschine &amp; Trockner</li>
+                        <li>2 große Schlafräume für je 10 bis 15 Personen</li>
+                        <li>Kissen und Bettlaken sind vorhanden, Decken oder Schlafsäcke müssen selbst mitgebracht werden</li>
+                        <li>1 Leiterschlafraum mit 2 Betten &amp; seperatem Waschbecken</li>
+                    </ul>
+                </div>
+                <div class="right">
+                    <div class="txt">
+                        <div class="slideshowDiv" id="slideshow2">
+                            <div class="mySlides fade">
+                                <div class="slideshow-number">1 / 4</div>
+                                <img src="./bilder/heimBilder/schlaf1.jpg" style="width:100%" onclick="onImgClick(this)">
+                            </div>
+                
+                            <div class="mySlides fade">
+                                <div class="slideshow-number">2 / 4</div>
+                                <img src="./bilder/heimBilder/schlaf2.jpg" style="width:100%" onclick="onImgClick(this)">
+                            </div>
+                
+                            <div class="mySlides fade">
+                                <div class="slideshow-number">3 / 4</div>
+                                <img src="./bilder/heimBilder/bad1.jpg" style="width:100%" onclick="onImgClick(this)">
+                            </div>
+                
+                            <div class="mySlides fade">
+                                <div class="slideshow-number">4 / 4</div>
+                                <img src="./bilder/heimBilder/bad2.jpg" style="width:100%" onclick="onImgClick(this)">
+                            </div>
+                
+                            <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+                            <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+                        </div>
+                        <br>
+                
+                        <div style="text-align:center">
+                            <span class="dot" onclick="currentSlide(1, 1)"></span>
+                            <span class="dot" onclick="currentSlide(2, 1)"></span>
+                            <span class="dot" onclick="currentSlide(3, 1)"></span>
+                            <span class="dot" onclick="currentSlide(4, 1)"></span>
+                        </div>
+                        <br/><br/>
+                    </div>
+                </div>
+            </div>
+
+            <div class="split">
+                <div class="left">
+                    <h4>Tagungsräume</h4>
+                    <ul>
+                        <li>1 grosser Tagungsraum für bis zu 30 Personen</li>
+                        <li>2 kleine Tagungsräume</li>
+                        <li>vorhanden sind Tafel, FlipChart und Leinwand</li>
+                    </ul>
+                </div>
+                <div class="right">
+                    <div class="txt">
+                        <div class="slideshowDiv" id="slideshow3">
+                            <div class="mySlides fade">
+                                <div class="slideshow-number">1 / 2</div>
+                                <img src="./bilder/heimBilder/tag1.jpg" style="width:100%" onclick="onImgClick(this)">
+                            </div>
+                
+                            <div class="mySlides fade">
+                                <div class="slideshow-number">2 / 2</div>
+                                <img src="./bilder/heimBilder/tag2.jpg" style="width:100%" onclick="onImgClick(this)">
+                            </div>
+                
+                            <a class="prev" onclick="plusSlides(-1, 2)">&#10094;</a>
+                            <a class="next" onclick="plusSlides(1, 2)">&#10095;</a>
+                        </div>
+                        <br>
+                
+                        <div style="text-align:center">
+                            <span class="dot" onclick="currentSlide(1, 2)"></span>
+                            <span class="dot" onclick="currentSlide(2, 2)"></span>
+                        </div>
+                        <br/><br/>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            let slideIndex = [1, 1, 1];
+            let slideId = ["slideshow1", "slideshow2", "slideshow3"];
+            showSlides(1, 0);
+            showSlides(1, 1);
+            showSlides(1, 2);
+
+            function plusSlides(n, no) {
+                showSlides(slideIndex[no] += n, no);
+            }
+
+            function currentSlide(n, no) {
+                showSlides(slideIndex[no] = n, no);
+            }
+
+            function showSlides(n, no) {
+                let i;
+                let x = document.getElementById(slideId[no]).getElementsByClassName("mySlides");
+                let dots = document.getElementById(slideId[no]).parentNode.getElementsByClassName("dot");
+                if (n > x.length) { slideIndex[no] = 1 }
+                if (n < 1) { slideIndex[no] = x.length }
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                x[slideIndex[no] - 1].style.display = "block";
+                dots[slideIndex[no] - 1].className += " active";
+            }
+        </script>
+    <%- include("../components/footer") %>
+</body>
+</html>

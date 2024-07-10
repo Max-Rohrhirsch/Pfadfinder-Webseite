@@ -17,9 +17,9 @@ html {scroll-behavior: smooth;}
     --bColor: rgb(60,60,60);
     --iconFilter: invert();
     --orangeNav: none;
+    --font-size: 17px;
 
-
-    font-size: 25px;
+    font-size: var(--font-size);
 }
 
 ::selection {                    /*Farbe mit der Texte makiert werden*/
@@ -41,7 +41,7 @@ html {scroll-behavior: smooth;}
 }
 
 body {
-    margin:0px;
+    margin: 0px;
     color: var(--textColor);
     background-color: var(--backgroundColor);
     transition: var(--transitionTime);
@@ -54,7 +54,7 @@ nav {                                /*Navigation Bar*/
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    margin: 0px;
+    margin: 0;
     position: fixed;
     background-color: var(--mediumColor);
     width: 100%;
@@ -62,8 +62,12 @@ nav {                                /*Navigation Bar*/
     transition: var(--transitionTime);
 }
 
+#darkmodeButton {
+    padding: 6px 15px;
+}
+
 .dropicon {  /*Pfeil nach unten im dropdownbtn*/
-    font-size: 15px;
+    font-size: 8px;
 }
 
 .navLinks , .dropdown a {           /*Dropdown menü*/
@@ -81,7 +85,7 @@ nav {                                /*Navigation Bar*/
     display: none;
     position: absolute;
     z-index: 1;
-    min-width: 120px;
+
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
 }
 
@@ -106,7 +110,6 @@ header div {
 }
 
 header p {
-    font-size: var(--mainFontSize);
     max-width: 1000px;
     color: white;
 }
@@ -254,7 +257,7 @@ h3 {                                        /*Die Überschrift mit Bildern im Hi
 }
 
 h4 {                                       /*Die sehr kleine Überschrift in Datenschutz*/
-    text-align: center;
+    text-align: left;
     font-size: 20px;
     color: var(--textColor);
     transition: var(--transitionTime);
@@ -292,7 +295,7 @@ button {
 
 table {
     width: 100%;
-    font-size: var(--mainFontSize);
+    font-size: var(--mainFont);
 }
 
 th, td {
@@ -355,7 +358,6 @@ span { text-align: center; }
     justify-content: space-between;
     width: var(--mainWidth);
     margin: auto;
-    font-size: var(--mainFontSize);
 }
 
 .tableColumn {
@@ -397,7 +399,6 @@ span { text-align: center; }
   margin-top: -22px;
   color: white;
   font-weight: bold;
-  font-size: 18px;
   transition: 0.6s ease;
   user-select: none;
   background-color: rgba(0,0,0,0.3);
@@ -416,7 +417,6 @@ span { text-align: center; }
 /* Caption text */
 .slideshowText {
   color: #f2f2f2;
-  font-size:  --mainFontSize;
   position: absolute;
   width: 100%;
   bottom: 0px;
@@ -453,6 +453,23 @@ span { text-align: center; }
 
 .mySlides {display: none}
 
+                     /*Split div*/
+.split {
+    display: flex;
+    width: 100%;
+    min-height: 50vh;
+}
+
+.left, .right {
+    flex: 1; /* Takes equal space for both divs */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+
+
+
                       /*footer Sachen*/
 
 footer {
@@ -465,8 +482,7 @@ footer {
  .footerButton {                         /* Der Knopf für "Nach oben" */
     color:black;
     background-color: white;
-    padding: 15px;
-    font-size: 20px;
+    padding: 10px;
     margin-top: 60px;
     margin-bottom: 10px;
     border-radius: 5px;
@@ -478,11 +494,10 @@ footer {
 
 .footerLinks, .footerLinks a {
     color: white;
-    font-size: 13px;
 }
 footer img , nav img, p img {
-  width: 20px;
-  height: 20px;
+  width: 13px;
+  height: 13px;
   color: white;
 }
 nav img {
@@ -518,7 +533,7 @@ filter:  sepia(100%);
 }
 @media only screen and (max-width: 1000px) {
   .backg {
-    background-image: none; //Falls der bildschirm zu klein ist, wird das bgimg bei Links/shop nicht angezeigt
+    background-image: none;
   }
 }
 
