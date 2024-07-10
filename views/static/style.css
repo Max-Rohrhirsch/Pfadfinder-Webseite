@@ -85,7 +85,6 @@ nav {                                /*Navigation Bar*/
     display: none;
     position: absolute;
     z-index: 1;
-
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
 }
 
@@ -496,24 +495,12 @@ footer {
     color: white;
 }
 footer img , nav img, p img {
-  width: 13px;
-  height: 13px;
-  color: white;
+    width: 13px;
+    height: 13px;
+    color: white;
 }
 nav img {
-filter:  sepia(100%);
-}
-
-@media only screen and (max-width: 700px) {
-
-  .stammesbild {
-    width: 100%;
-    margin-bottom: 2em;
-  }
-
-  .stammesbildDiv {
-    display: block;
-  }
+    filter:  sepia(100%);
 }
 
 
@@ -547,3 +534,92 @@ background-size: auto 100%;
 .bg {
 background-size: 100% auto;
 }}
+
+
+
+@media  only screen and (max-width: 768px) {
+    /*   Header/Table   */
+    header h1 {
+        font-size: 2em;
+    }
+    header p {
+        font-size: 1em;
+        max-width: 80vw;
+    }
+
+    table {
+        font-size: 13px;
+    }
+}
+
+
+
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+        position: relative; /* To allow dropdowns to be positioned correctly */
+    }
+
+    .nav-content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .dropdown, .navLinks {
+        width: 100%;
+    }
+
+    .dropdownContent {
+        position: relative;
+        width: 100%;
+        box-shadow: none;
+        display: none; /* Hide by default, will be shown via JavaScript */
+    }
+
+    .dropdownBtn {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .dropdownBtn img {
+        transition: transform 0.3s ease;
+    }
+
+    .dropdownBtn[aria-expanded="true"] img {
+        transform: rotate(180deg);
+    }
+
+    .dropdownContent[aria-expanded="true"] {
+        display: block;
+    }
+
+    #darkmodeButton {
+        align-self: flex-end;
+    }
+}
+
+/* Specific media query for phones */
+@media (max-width: 480px) {
+    nav {
+        padding: 5px;
+    }
+
+    .navLinks, .dropdownBtn, .dropdown a {
+        padding: 8px 10px;
+        font-size: 0.9rem;
+    }
+
+    .dropdownBtn img {
+        width: 12px;
+    }
+
+    #darkmodeButton {
+        display: none;
+    }
+}

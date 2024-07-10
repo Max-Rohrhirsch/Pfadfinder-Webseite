@@ -100,3 +100,9 @@ function updateDarkMode() {    //It reads the darkmode and changes the style to 
     if (darkmodeIcon) darkmodeIcon.src = "/bilder/" + (isDarkMode === "true" ? "sun" : "moon") + ".png";
 }
 updateDarkMode();   //updates the theme-color before the page gets generated
+
+function toggleDropdown(element) {
+    var expanded = element.getAttribute('aria-expanded') === 'true';
+    element.setAttribute('aria-expanded', !expanded);
+    element.nextElementSibling.setAttribute('aria-expanded', !expanded);
+}

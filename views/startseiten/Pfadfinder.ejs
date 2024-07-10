@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="style.css"/>      <!--Eigene Daten imporitieren -->
     <script src="./script.js"></script>
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet'>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">    <!--Die Beiden linien importieren Icons -->
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
@@ -43,6 +44,15 @@
         animation: shake 0.5s;
         animation-iteration-count: 2;
         opacity: 1;
+    }
+
+    @media only screen and (max-width: 700px) {
+        .stammesbild {
+            width: 100%;
+            margin-bottom: 2em;
+        }
+
+        .stammesbildDiv {display : block;}
     }
 </style>
 

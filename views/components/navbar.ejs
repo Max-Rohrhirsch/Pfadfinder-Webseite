@@ -1,29 +1,33 @@
-<nav>                <!--Die Navigation Bar-->
-    <div class="dropdown">                       <!-- Hat eine Hauptklasse -->
-        <a class="dropdownBtn" onclick="onHomeClick('id0')">Home <img src="./icons/navRunter.svg" style="filter: var(--orangeNav)"></a>
-        <div class="dropdownContent">
-            <a onclick="onHomeClick('id1')">Über den Stamm</a>
-            <a onclick="onHomeClick('id2')">Termine</a>
-            <a onclick="onHomeClick('id3')">Kontakte</a>
+<nav>
+    <!-- Navigation Bar -->
+    <div class="nav-content">
+        <div class="dropdown">
+            <!-- Dropdown menu -->
+            <a class="dropdownBtn" onclick="toggleDropdown(this)" aria-expanded="false">Home <img src="./icons/navRunter.svg" style="filter: var(--orangeNav)"></a>
+            <div class="dropdownContent" aria-expanded="false">
+                <a onclick="onHomeClick('id1')">Über den Stamm</a>
+                <a onclick="onHomeClick('id2')">Termine</a>
+                <a onclick="onHomeClick('id3')">Kontakte</a>
+            </div>
         </div>
-    </div>
 
-    <div class="dropdown">                     <!-- Zweites Dropdown menü -->
-        <a class="dropdownBtn">Der Stamm <img src="./icons/navRunter.svg" style="filter: var(--orangeNav)"></a>
-        <div class="dropdownContent">
-            <a href="/meuten">Meuten</a>
-            <a href="/sippen">Sippen</a>
-            <a href="/singerunde">Singerunde</a>
-            <a href="/shop">Shop</a>
-            <a href="/chronik">Chronik</a>
+        <div class="dropdown">
+            <!-- Second dropdown menu -->
+            <a class="dropdownBtn" onclick="toggleDropdown(this)" aria-expanded="false">Der Stamm <img src="./icons/navRunter.svg" style="filter: var(--orangeNav)"></a>
+            <div class="dropdownContent" aria-expanded="false">
+                <a href="/meuten">Meuten</a>
+                <a href="/sippen">Sippen</a>
+                <a href="/singerunde">Singerunde</a>
+                <a href="/shop">Shop</a>
+                <a href="/chronik">Chronik</a>
+            </div>
         </div>
-    </div>
 
-    <a class="navLinks" href="/Heimvermietung">Heimvermietung</a>
-    <a class="navLinks" href="/links">Links</a>
-    <a class="navLinks" href="/mitmachen">Mitmachen</a>
-    <a class="navLinks" href="/aktionenUebersicht">Aktivitäten</a>
+        <a class="navLinks" href="/Heimvermietung">Heimvermietung</a>
+        <a class="navLinks" href="/links">Links</a>
+        <a class="navLinks" href="/mitmachen">Mitmachen</a>
+        <a class="navLinks" href="/aktionenUebersicht">Aktivitäten</a>
+    </div>
     <span style="flex-grow: 1"></span>
-
     <a onclick="toggleDarkMode();" class="navLinks" id="darkmodeButton"><img class="darkmodeIcon" id="darkmodeIcon" src="/bilder/moon.png"></a>
 </nav>

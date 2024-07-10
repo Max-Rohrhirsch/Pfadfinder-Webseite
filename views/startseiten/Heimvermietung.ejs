@@ -4,7 +4,7 @@
     <link rel="icon" href="./bilder/favicon.png" type="image/x-icon"/> <!--Favicon -->
 
     <link rel="stylesheet" href="style.css"/>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="./script.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet'>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -23,6 +23,36 @@
         .center {
             margin-left: 15vw;
             width: 70vw;
+        }
+
+        @media only screen and (max-width: 800px) {
+            .center {
+                margin-left: 5vw;
+                width: 90vw;
+            }
+
+            .calendar {
+                width: 90vw;
+            }
+
+            .split {
+                flex-direction: column;
+            }
+
+            .left, .right {
+                width: 100%;
+            }
+
+            .right {
+                margin-top: 20px;
+            }
+
+            .split {
+                margin-left: 0;
+            }
+
+
+            
         }
     </style>
 </head>
